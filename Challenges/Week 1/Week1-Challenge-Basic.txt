@@ -1,0 +1,18 @@
+Basic JS — Worksheet
+
+This week you'll tackle a series of unit tests that will give you a chance to get familiar with javascript basics.
+Challenges
+
+    Get a copy of the code at https://github.com/portsoc/ws_basicjs onto your local machine.
+    Open index.js and, in an editor modify the id, fn and sn functions:
+        The id function should return your student ID.
+        The fn function should return your first name.
+        The sn function should return your surname.
+    Open index.html in a browser and observe that:
+        not all the tests pass
+        there are three tests concerning the id, fn and sn functions that should pass.
+    This week there are multiple test files which follow the naming convention assess.subject.js - you should read the unit tests in each of these files and attempt to make them pass by implementing code in the index.js file.
+        Note that you have already satisfied the tests in assess.basics.js by returning your id and name.
+        Notice that some of the tests use a compare function. One of your tasks is to write that function, so you should recognise that any tests which use it cannot pass until it is written and correct! :-)
+    If you have questions, ask each other, and ask us.
+

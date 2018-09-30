@@ -1,0 +1,33 @@
+Welcome to Year 2!
+
+There's no prescriptive hand-holding any more.
+
+Let that sink in for a second. You're the pilot here.
+
+This means you have to think and learn how to go about solving the problems we give you.
+
+You may want to ask each other, before you ask us, if you need a nudge in the right direction.
+
+This week we're getting to grips with retrieving code from Github and editing, running and testing it.
+Challenges
+
+    Get a copy of the code at https://github.com/portsoc/wswk1 onto your local machine.
+        You might want to manually download it, or use git to clone it (Github Desktop is available through MyApps).
+
+    Open index.html in a browser and observe that not all the tests pass.
+        Take some time to familiarise yourself with the information on the page - the debug information is useful.
+
+    Open index.js in an editor and make the changes necessary so that all the tests pass.
+
+    Next, look at assess.js - try to identify and understand the three tests that you've seen running.
+
+    Can you see a problem with the test for the "add" function? Write a better test that fixes the problem (hint: try changing the + to * in the add function and see if the test passes).
+
+    Get your VM started and login to it.
+        If you've forgotten how to do this, read the first page of the primer from last year.
+
+    Now, try to do challenges 1 to 3 again, but this time on your VM, using the basic http-server you used last year.
+        NB: Command-line git is already installed on your VM.
+
+    Reflect on what skills you needed reminders for, and what new skills you may need to acquire from what you've seen today.
+
