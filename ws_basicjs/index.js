@@ -23,8 +23,7 @@ function largest(array) { return Math.max(...array) }
 function compare(cArray1, cArray2) { return cArray1.toString() === cArray2.toString(); }
 function addToAll(array, adder) { return array.forEach((i) => { return array[i] + adder;}); }
 function rememberThis(variable) { remembered = variable; }
-function nArray(n) { return Array.from({length: n}, (index, numbers) => index + 1); }
+function nArray(n) { return Array.from({length: n}, (index) => index + 1); }
 function addAllOpt(array) { return Array.isArray(array)? array.reduce((head, tail) => head + tail, 0) : 0; }
-
-function divisors(array, divisor) {}
-function multiples(n, m) { return Array.from({length: n}, (index, numbers)  => 1*m, ); }
+function divisors(array, divisor) { array.map(function(index) { return index / divisor; }); }
+function multiples(n, m) { return Array.from({length: n}, (index, m)  => 1*m, ); }
