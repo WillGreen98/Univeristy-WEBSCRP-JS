@@ -20,9 +20,8 @@ function arraySet(array, index, number) { if(index in array) array[index] = numb
 
 function addAll(array) {
     let total = 0;
-    for(let index in array) {
-        total += array[index];
-    }return total;
+    for(const value of array) total += value;
+    return total;
 }
 
 function larger(num1, num2) { return Math.max(num1, num2); }
@@ -35,7 +34,7 @@ function addToAll(array, adder) { return array.map((index) => { return index + a
 
 function rememberThis(variable) { remembered = variable; }
 
-function nArray(n) { return Array.from({length: n}, (index) => index + 1); }
+function nArray(n) { return Array.from({length: n}, (index, number) => number + 1); }
 
 function addAllOpt(array) { return Array.isArray(array)? array.reduce((head, tail) => head + tail, 0) : 0; }
 
