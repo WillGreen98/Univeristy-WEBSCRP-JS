@@ -17,4 +17,4 @@ function rememberThis(variable) { remembered = variable; }
 function nArray(n) { return Array.from({length: n}, (number, index) => index + 1); }
 function addAllOpt(array) { return Array.isArray(array) ? array.reduce((head, tail) => head + tail, 0) : 0; }
 function divisors(array, divisor) { return array.filter(index => index % divisor === 0); }
-function multiples(n,m) { return Array(n).fill(false).map((_, n) => n + 1).map(n => n * m); }
+function multiples(n, m) { return Array(n).fill(false).map((_, index) => index + 1).map(index => index * m); }
