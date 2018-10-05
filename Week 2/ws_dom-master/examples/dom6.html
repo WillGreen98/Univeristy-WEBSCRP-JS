@@ -1,0 +1,17 @@
+<!doctype html>
+<title>create element</title>
+
+<body>
+  <!--
+    body tags used here for clarity
+    a single document body element
+    ALWAYS exists in the DOM
+  -->
+
+<script>
+  const para = document.createElement("p");
+  para.textContent = "Hello World!";
+  document.body.appendChild(para);
+</script>
+
+</body>

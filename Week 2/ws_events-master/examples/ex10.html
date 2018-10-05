@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<title>Propagation Example</title>
+<link href="style.css" rel="stylesheet" />
+
+<style>
+	div, div * {
+		background: rgba(0,30,100, 0.5);
+		padding: 1em;
+		border: black thin dashed;
+		color: white;
+	)
+</style>
+
+<h1>Event Propagation Example</h1>
+<p>In this first area, each fruit has a distinct event listener, so when the click event fires the <code>event.target</code> and <code>event.currentTarget</code> refer to the same element.  <b>Open the console</b> to check what's been clicked.</p>
+
+<div id="fruit">
+	<p id="banana">Banana</p>
+	<p id="apple">Apple</p>
+</div>
+
+<p>In the first area, a single event listener is used for the whole area, so when the click event fires the <code>event.target</code> refers to the element on which the event occurred and <code>event.currentTarget</code> is always the event that has the listener attached.</p>
+
+<p>NB: You can also click on the background - this may not be what you want in your app so you need to account for it, but, the advantage of this method is far fewer event listeners; so... less coding and less for the browser to do.</p>
+
+<div id="veg">
+	<p id="cucumber">Cucumber</p>
+	<p id="squash">Butternut Squash</p>
+</div>
+
+
+<script>
+	/**
+	 * event.currentTarget = the element with the eventHandler
+	 * event.target = the element on which the event occurred.
+	 */
+	function report(eventObject) {
+		console.log("Target", eventObject.target);
+		console.log("Current Target", eventObject.currentTarget);
+	}
+
+	window.addEventListener("load", () => {
+		// individual listeners
+		banana.addEventListener("click", report);
+		apple.addEventListener("click", report);
+
+		// a group listener
+		veg.addEventListener("click", report);
+	});
+</script>

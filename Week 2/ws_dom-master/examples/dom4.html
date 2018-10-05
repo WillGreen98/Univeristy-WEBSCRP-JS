@@ -1,0 +1,14 @@
+<!doctype html>
+<title>text content</title>
+
+<p id="foo">
+  hello
+</p>
+
+<script>
+  console.log(window.foo.textContent);
+
+  window.foo.textContent = "bye";
+
+  console.log(window.foo.textContent);
+</script>

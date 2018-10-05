@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>JS Bin</title>
+
+<p>Hello Event World</p>
+<p>TIL that events can be useful.</p>
+<p>etc.</p>
+
+<script>
+  function shout(e) {
+  	console.log(e.target.textContent);
+  }
+
+  const paras = document.querySelectorAll("p");
+
+  for (let p of paras) {
+  	p.addEventListener("click", shout);
+  }
+</script>

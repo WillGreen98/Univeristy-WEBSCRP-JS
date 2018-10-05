@@ -1,0 +1,14 @@
+<!doctype html>
+<title>insert before</title>
+
+<ul id=x>
+  <li>one
+  <li>two
+  <li id=four>four
+<ul>
+
+<script>
+  const li = document.createElement("li");
+  li.textContent = "three";
+  window.x.insertBefore(li, window.four);
+</script>

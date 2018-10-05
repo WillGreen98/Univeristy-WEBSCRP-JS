@@ -1,0 +1,22 @@
+Worksheet: DOM & Events
+
+This week you have two sets of unit tests to work through.
+1. If you have questions from last week's worksheet – ask us early – we may want to discuss any problems you raise with the whole group.
+Dom Challenges
+1. Get a copy of the code at https://github.com/portsoc/ws_dom onto your local machine.
+2. Open index.js and modify the id, fn and sn functions:
+   1. The id function should return your student ID.
+   2. The fn function should return your first name.
+   3. The sn function should return your surname.
+1. Open index.html in a browser and observe that:
+   1. not all the tests pass, but...
+   2. there are three tests concerning the id, fn and sn functions that should pass because you changed the functions above; right?
+1. The tests are all in assess.dom.js – attempt to make them pass by implementing code in the index.js file.
+Events Challenges
+1. Get a copy of the code at https://github.com/portsoc/ws_events onto your local machine.
+2. Open index.js and modify the id, fn and sn functions:
+   * The id function should return your student ID.
+   * The fn function should return your first name.
+   * The sn function should return your surname.
+1. As before, work through all the assess.*.js tests so that they pass by implementing code in the index.js file.
+2. If you get stuck, ask each other, and ask us.

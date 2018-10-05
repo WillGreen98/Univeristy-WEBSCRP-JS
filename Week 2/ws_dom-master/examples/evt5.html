@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>JS Bin</title>
+
+<p id=example>Hello Event World</p>
+
+<script>
+  function shoutOnce(e) {
+  	console.log(e.target.textContent);
+  	e.target.removeEventListener("click", shoutOnce);
+  }
+
+  window.example.addEventListener("click", shoutOnce);
+</script>
