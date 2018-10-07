@@ -17,7 +17,6 @@ QUnit.test("Change the id method in index.js to return your student ID.",
     }
 );
 
-
 QUnit.test("Change the fn method in index.js to return your first name.",
     function(assert) {
         assert.ok(

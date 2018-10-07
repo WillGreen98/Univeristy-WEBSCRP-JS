@@ -2,12 +2,10 @@
 
 QUnit.module("DOM");
 
-
 // turns an array-like into an array
 function arr(a) {
     return Array.prototype.slice.call(a);
 }
-
 
 QUnit.test("replace text",
     function(assert) {
@@ -62,8 +60,6 @@ QUnit.test("adding text",
     }
 );
 
-
-
 QUnit.test("setAttributes",
     function(assert) {
         assert.ok(
@@ -85,8 +81,6 @@ QUnit.test("setAttributes",
     }
 );
 
-
-
 QUnit.test("setId",
     function(assert) {
 
@@ -106,8 +100,6 @@ QUnit.test("setId",
         assert.strictEqual( p.id, "foobarbaz" );
     }
 );
-
-
 
 QUnit.test("setClass",
     function(assert) {
@@ -130,7 +122,6 @@ QUnit.test("setClass",
         window.setmyclass.parentElement.classList.add("done");
     }
 );
-
 
 QUnit.test("addAClass",
     function(assert) {
@@ -166,9 +157,6 @@ QUnit.test("addAClass",
     }
 );
 
-
-
-
 QUnit.test("removeAClass",
     function(assert) {
 
@@ -192,13 +180,6 @@ QUnit.test("removeAClass",
     }
 );
 
-
-
-
-
-
-
-
 QUnit.test("creating elements",
     function(assert) {
         assert.ok(
@@ -216,8 +197,6 @@ QUnit.test("creating elements",
     }
 
 );
-
-
 
 QUnit.test("findElementById",
     function(assert) {
@@ -247,12 +226,9 @@ QUnit.test("findElementById",
 
 );
 
-
-
 // TODO: this test also accepts findElementByQuery because
 // that's what we used to call it until 2017-10-13
 // when we can drop this special case, remove the first lines of the test
-
 
 QUnit.test("findElementsByQuery",
     function(assert) {
@@ -285,9 +261,6 @@ QUnit.test("findElementsByQuery",
         );
     }
 );
-
-
-
 
 QUnit.test("reverseList",
     function(assert) {
@@ -336,7 +309,6 @@ QUnit.test("reverseList",
 
     }
 );
-
 
 QUnit.test("listMover",
     function(assert) {
@@ -423,9 +395,6 @@ QUnit.test("listMover",
     }
 );
 
-
-
-
 QUnit.test("listFiller",
     function(assert) {
 
@@ -480,7 +449,6 @@ QUnit.test("listFiller",
     }
 );
 
-
 QUnit.test("duplication",
     function(assert) {
 
@@ -525,8 +493,6 @@ QUnit.test("duplication",
     }
 );
 
-
-
 QUnit.test("removeAllMatchingNodes",
     function(assert) {
 
@@ -558,7 +524,6 @@ QUnit.test("removeAllMatchingNodes",
         parent.classList.add("done");
     }
 );
-
 
 QUnit.test("form elements",
     function(assert) {
