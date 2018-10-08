@@ -21,8 +21,8 @@ function addTextTo(element, string) {
 }
 
 function moreBears() {
-    let set = (element, attribute) => { for(let key in attribute) element.setAttribute(key, attribute[key]) };
-    set(document.getElementById("animals"), {src: "http://placebear.com/400/200", alt: "A bear.", title: "A BEAR!"});
+    let attribute_setter = (element, attribute) => { for(let key in attribute) element.setAttribute(key, attribute[key]) };
+    attribute_setter(document.getElementById("animals"), {src: "http://placebear.com/400/200", alt: "A bear.", title: "A BEAR!"});
 }
 
 function setId(element, string) {
@@ -65,13 +65,45 @@ function reverseList(selector) {
     return no;
 }
 
-// this.element & this.selector doesn't work
+// TODO try this.element & this.selector - doesn't work
 function mover(element, selector) {
     let object_element = document.querySelector(element);
     let object_selector = document.querySelector(selector);
     object_selector.appendChild(object_element);
 }
 
-function filler(element_list, array) {
+function filler(list, array) {
+    //let array_items = document.getElementById(array).getElementsByTagName("li");
 
+    for(const value of array) {
+        const li = document.createElement("li");
+        li.textContent = value;
+        list.appendChild(li);
+    }
+    return list
+}
+
+function dupe(selector) {
+    const element = document.querySelector(selector);
+    const new_element = document.createElement("p");
+    new_element.textContent = element.textContent;
+    element.parentNode.appendChild(new_element);
+}
+
+function removeAll(selector) {
+    const elements = document.querySelectorAll(selector);
+    for(const element of elements){
+        element.parentElement.removeChild(element)
+    }
+}
+
+function getUserData() {
+    const username = document.querySelector("#username");
+    const speed = document.querySelector("#speed");
+    const student = document.querySelector("#student");
+    return {
+        name: username.value,
+        speed: parseInt(speed.value),
+        student: student.checked
+    }
 }

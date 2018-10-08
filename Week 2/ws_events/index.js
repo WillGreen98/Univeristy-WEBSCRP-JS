@@ -1,34 +1,7 @@
-/*
- * This is index.js
- * Start by modifying the id, fn and sn functions to return
- * information about you, then open index.html to check what
- * else you have to do, adding functions to the end of this
- * file as necessary.
- *
- * NB: all code you write this year should use strict mode, so
- * we've enabled that by default with the first line of code.
- */
-
 'use strict';
 
-function id() {
-    return "Replace This With Your Student ID";
-    // e.g. return "UP654321";
-}
 
-function fn() {
-    return "Replace This With Your First Name";
-}
-
-function sn() {
-    return "Replace This With Your Surname";
-}
-
-/**
- * Utility functions for reference that may be used by tests
- * for various reasons.
- */
-
+// Utility functions for reference that may be used by tests for various reasons.
 function exampleAttacher() {
   window.exampleid.addEventListener("click", exampleEventHandler);
 }
@@ -47,6 +20,64 @@ function lovelyToggle() {
     window.thisisalovelyparagraph.classList.toggle("lovely");
 }
 
-/**
- * Add your functions here...
- */
+function id() {
+    return "UP853829";
+}
+
+function fn() {
+    return "Will";
+}
+
+function sn() {
+    return "Green";
+}
+
+function targetTextToConsole(event) {
+    console.log(event.target.textContent);
+}
+
+function tttcAttacher() {
+    window.button0.addEventListener("click", targetTextToConsole);
+}
+
+function lovelyParaAttacher() {
+    window.thisisalovelyparagraph.addEventListener("click", lovelyToggle);
+}
+
+function lovelyButtonAttacher() {
+    window.button.addEventListener("click", lovelyToggle);
+}
+
+function concatWorker(event) {
+    window.out.textContent = window.value_in.value + window.value_in.value
+}
+
+function concatAttacher() {
+    window.value_in.addEventListener("change", concatWorker);
+    window.value_in.addEventListener("change", concatWorker);
+}
+
+function snitchAttacher() {
+    window.mousewatcher.addEventListener("mouseover", snitchUpdater);
+    window.mousewatcher.addEventListener("mouseout", snitchUpdater);
+}
+
+function reportUpdater(event) {
+    document.getElementById("report").textContent = "x: " + event.screenX + " y: " + event.screenY;
+}
+
+function reportAttacher() {
+    window.mousereporter.addEventListener("mousemove", reportUpdater);
+}
+
+function idValidationWatcher(event) {
+    if(event.target.value.includes(" ")) {
+        event.target.classList.add("invalid");
+    } else {
+        event.target.classList.remove("invalid");
+    }
+}
+
+function idValidationAttacher() {
+    document.getElementById("newid").addEventListener("input", idValidationWatcher);
+}
