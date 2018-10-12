@@ -14,3 +14,7 @@ Each `Week Folder` will contain the challenge file(s)
 ## Week 2
    - ws_dom
    - ws_events
+   
+## Week 3
+   - ws_canvas
+   - Web-Canvas-Stick-Figures
