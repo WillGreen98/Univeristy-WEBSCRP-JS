@@ -35,25 +35,25 @@ function setClass(element, string) {
     return element;
 }
 
-function addAClass(element, string){
+function addAClass(element, string) {
     element.classList.add(string);
     return element
 }
 
-function removeAClass(element, string){
+function removeAClass(element, string) {
     element.classList.remove(string);
     return element
 }
 
-function newElement(name){
+function newElement(name) {
     return document.createElement(name)
 }
 
-function findElementById(id){
+function findElementById(id) {
     return document.getElementById(id);
 }
 
-function findElementsByQuery(query){
+function findElementsByQuery(query) {
     return document.querySelectorAll(query)
 }
 
@@ -65,16 +65,11 @@ function reverseList(selector) {
     return no;
 }
 
-// TODO try this.element & this.selector - doesn't work
 function mover(element, selector) {
-    let object_element = document.querySelector(element);
-    let object_selector = document.querySelector(selector);
-    object_selector.appendChild(object_element);
+    document.querySelector(selector).appendChild(document.querySelector(element));
 }
 
 function filler(list, array) {
-    //let array_items = document.getElementById(array).getElementsByTagName("li");
-
     for(const value of array) {
         const li = document.createElement("li");
         li.textContent = value;
@@ -91,8 +86,7 @@ function dupe(selector) {
 }
 
 function removeAll(selector) {
-    const elements = document.querySelectorAll(selector);
-    for(const element of elements){
+    for(const element of document.querySelectorAll(selector)){
         element.parentElement.removeChild(element)
     }
 }

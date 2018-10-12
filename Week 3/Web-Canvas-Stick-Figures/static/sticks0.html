@@ -1,0 +1,80 @@
+<!doctype html>
+<title>Drawing on Canvas</title>
+<style>
+  /* the canvas is normally invisible so we give it a border */
+  canvas {
+    border: 2px dashed green;
+    display: block;
+    margin: 1em;
+  }
+</style>
+
+<!--
+     in this file, we have an HTML5 canvas,
+     on which we draw just a bit
+  -->
+
+<h1>Drawing on Canvas</h1>
+
+<nav>
+  <span style="color: #888">previous</span> | <a href="/">index</a> | <a href="sticks1.html">next</a>
+</nav>
+
+<canvas id="canvas" width="800" height="500">
+</canvas>
+
+
+
+<script>
+  // this will make the JavaScript engine much pickier about potential programming issues
+  'use strict';
+
+  // get the "drawing context" - the object that can actually draw on the canvas
+  const c = document.getElementById("canvas").getContext("2d");
+
+  // set our drawing style
+  c.lineWidth = 3;
+  c.strokeStyle = "red";
+  c.fillStyle = "#0ff";
+
+  c.lineCap = "round";   // or butt or square
+  c.lineJoin = "round";  // or bevel or miter
+
+  // c.setLineDash([20,20]); // works best with lineCap butt
+
+  // draw a line
+  // c.beginPath();
+  // c.moveTo(0, 0);
+  // c.lineTo(400, 200);
+  // c.stroke();
+
+  // draw a triangle
+  // c.beginPath();
+  // c.moveTo(200, 450);
+  // c.lineTo(400, 150);
+  // c.lineTo(600, 450);
+  // c.fill();
+
+  // c.stroke();
+
+  // c.closePath();
+  // c.stroke();
+
+  // draw a circle
+  // c.fillStyle="white";
+  // c.strokeStyle = "green";
+  // c.beginPath();
+  // c.arc(400, 150, 100, 0, 2 * Math.PI, false);
+  // c.fill();
+  // c.stroke();
+
+  // exercise for you:
+  // drop the triangle
+  // change the arc to 200,100,60
+  // change the line to 200,160 -> 200,320
+  // add another 200,320 -> 250,480
+  // add another 200,320 -> 150,480
+  // add another 200,160 -> 250,320
+  // add another 200,160 -> 150,320
+  // then remove most of the beginPaths and strokes
+</script>

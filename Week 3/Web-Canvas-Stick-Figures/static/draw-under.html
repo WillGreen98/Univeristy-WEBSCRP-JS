@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<title>drawing under text</title>
+
+<style>
+  canvas { position: fixed; top: 0; left: 0; z-index: -1; }
+  span.c { display: inline-block; /* prevent wrapping */ }
+  p { min-width: 30em; }
+</style>
+<script src="js/drawing.js"></script>
+<script src="js/stickFigure.js"></script>
+
+<h1>drawing under text with canvas</h1>
+
+<nav>
+  <a href="/">index</a>
+</nav>
+
+<canvas id="hili" width="400" height="400"></canvas>
+
+<p>This example uses a canvas under the page on which we can draw word highlights. Every <span class=c>&lt;span class=c&gt;</span> element, forced not to wrap to a next line, is highlighted, and connected by a line to the next one.</p>
+
+<p>The rest is lorem ipsum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere iaculis sem, ut aliquam turpis. Mauris ullamcorper justo a <span class=c>interdum</span> hendrerit. Pellentesque rhoncus est ut arcu placerat cursus. Sed convallis mollis mauris, vel rutrum nibh. Proin iaculis orci augue, sed dapibus purus accumsan ut. Vivamus facilisis, diam vel scelerisque maximus, purus eros convallis lectus, sed elementum risus leo nec massa. Maecenas id volutpat ligula, et ullamcorper quam. Nam eros tortor, malesuada vel sagittis ut, porttitor non sapien. Curabitur vehicula a nisi ut egestas. Donec fermentum porta urna, non sagittis sapien finibus ut. <span class=c>Vestibulum</span> at risus non nisl aliquam interdum. Mauris tincidunt mi et diam egestas dapibus. Nunc euismod lorem est, vel dapibus augue sollicitudin ac.</p>
+
+<p>Phasellus vitae egestas diam. Nullam a urna augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac <span class=c>turpis</span> egestas. Curabitur efficitur tortor at venenatis ullamcorper. Nullam quis dictum elit, eu venenatis urna. Cras luctus vehicula neque, at ornare lacus tristique ac. Quisque euismod convallis ante ac cursus. Aliquam erat volutpat.</p>
+
+<p>Fusce bibendum tellus dui. Nam massa tortor, tincidunt vitae orci sit amet, mollis porttitor libero. In nec elit laoreet, condimentum mi quis, <span class=c>ultricies</span> turpis. Nulla facilisi. Duis sed dui vitae nisl eleifend dapibus. Vestibulum erat leo, condimentum sit amet nunc in, luctus dignissim mi. Pellentesque in tempor ligula, id tristique dui. Aenean ut turpis vel leo molestie rutrum eu ac felis. Vestibulum lacinia tincidunt euismod. Nunc imperdiet nisl et gravida rutrum. Nunc tristique turpis non faucibus rhoncus. Maecenas sed justo pellentesque, bibendum ex id, blandit erat. Maecenas molestie dictum consectetur.</p>
+
+<!-- use a normal text with "this is a secret message" ? -->
+
+<script>
+
+  'use strict';
+  window.addEventListener('load', draw);   // initial draw
+  window.addEventListener('scroll', draw); // if we move the page we need to redraw because the canvas doesn't move
+  window.addEventListener('resize', draw); // if we resize the page, it may reflow so we must redraw
+
+  function draw() {
+    // set the canvas size to the window size (this also clears it)
+    window.hili.width = window.innerWidth;
+    window.hili.height = window.innerHeight;
+
+    // get the context
+    const c = window.hili.getContext("2d");
+
+    // set the drawing style
+    c.lineWidth = 4;
+    c.strokeStyle = "#f00";
+    c.fillStyle = "#ff0";
+    c.lineCap = "round";
+
+    // drawStickFigure(c, 100, 200, 45);
+
+    let lastCX, lastCY;
+
+    const words = document.querySelectorAll('span.c');
+    for (let el of words) {
+
+      // find dimentions of the element
+      const elTop = offY(el) - window.scrollY;
+      const elLeft = offX(el) - window.scrollX;
+      const elW = el.offsetWidth;
+      const elH = el.offsetHeight;
+      const elCX = elLeft + elW/2;
+      const elCY = elTop + elH/2;
+
+      // draw an ellipse under the word to highlight it, padding it a bit
+      fillEll(c, elCX, elCY, elW/2+10, elH/2+5);
+
+      // if (lastCX != null) {
+      //   // draw a line from the previous word to the current one
+      //   line(c, lastCX, lastCY, elCX, elCY);
+      // }
+
+      lastCX = elCX;
+      lastCY = elCY;
+    }
+  }
+
+  // positions of a given element in a given root element
+  function offX(el, root) {
+    if (el === null || el === root) return 0;
+    return el.offsetLeft + offX(el.offsetParent, root);
+  }
+  function offY(el, root) {
+    if (el === null || el === root) return 0;
+    return el.offsetTop + offY(el.offsetParent, root);
+  }
+
+</script>
+
+</html>
