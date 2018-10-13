@@ -12,6 +12,8 @@ function sn() {
     return "Green";
 }
 
+let attribute_setter = (element, attribute) => { for(let key in attribute) element.setAttribute(key, attribute[key]) };
+
 function replaceText(element, string) {
     return element.textContent = string;
 }
@@ -21,7 +23,6 @@ function addTextTo(element, string) {
 }
 
 function moreBears() {
-    let attribute_setter = (element, attribute) => { for(let key in attribute) element.setAttribute(key, attribute[key]) };
     attribute_setter(document.getElementById("animals"), {src: "http://placebear.com/400/200", alt: "A bear.", title: "A BEAR!"});
 }
 
@@ -57,12 +58,8 @@ function findElementsByQuery(query) {
     return document.querySelectorAll(query)
 }
 
-// TODO Refactor as this an example
 function reverseList(selector) {
-    let no = document.querySelector(selector);
-    let no_len = no.childNodes.length;
-    while(no_len--) no.appendChild(no.childNodes[no_len]);
-    return no;
+    attribute_setter(document.querySelector(selector), {display: "flex", flexDirection: "row-reverse"});
 }
 
 function mover(element, selector) {
@@ -70,11 +67,7 @@ function mover(element, selector) {
 }
 
 function filler(list, array) {
-    for(const value of array) {
-        const [li] = [document.createElement("li")].map(index => { index.textContent = value; return index; });
-        list.appendChild(li);
-    }
-    return list
+    return array.forEach(function(value) { list.appendChild([li] = [document.createElement("li")].map(index => { index.textContent = value; return index; })); });
 }
 
 function dupe(selector) {
@@ -86,17 +79,14 @@ function dupe(selector) {
 
 function removeAll(selector) {
     for(const element of document.querySelectorAll(selector)){
-        element.parentElement.removeChild(element)
+        element.parentElement.removeChild(element);
     }
 }
 
 function getUserData() {
-    const username = document.querySelector("#username");
-    const speed = document.querySelector("#speed");
-    const student = document.querySelector("#student");
     return {
-        name: username.value,
-        speed: parseInt(speed.value),
-        student: student.checked
+        username: document.querySelector("#username").valueOf(),
+        speed: document.querySelector("#speed").valueOf(),
+        student: document.querySelector("#student").valueOf()
     }
 }
