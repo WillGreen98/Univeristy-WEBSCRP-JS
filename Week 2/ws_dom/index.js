@@ -71,8 +71,7 @@ function mover(element, selector) {
 
 function filler(list, array) {
     for(const value of array) {
-        const li = document.createElement("li");
-        li.textContent = value;
+        const [li] = [document.createElement("li")].map(index => { index.textContent = value; return index; });
         list.appendChild(li);
     }
     return list
