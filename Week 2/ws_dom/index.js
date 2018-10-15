@@ -12,8 +12,6 @@ function sn() {
     return "Green";
 }
 
-let attribute_setter = (element, attribute) => { for(let key in attribute) element.setAttribute(key, attribute[key]) };
-
 function replaceText(element, string) {
     return element.textContent = string;
 }
@@ -23,6 +21,7 @@ function addTextTo(element, string) {
 }
 
 function moreBears() {
+    let attribute_setter = (element, attribute) => { for(let key in attribute) element.setAttribute(key, attribute[key]) };
     attribute_setter(document.getElementById("animals"), {src: "http://placebear.com/400/200", alt: "A bear.", title: "A BEAR!"});
 }
 
@@ -59,7 +58,10 @@ function findElementsByQuery(query) {
 }
 
 function reverseList(selector) {
-    attribute_setter(document.querySelector(selector), {display: "flex", flexDirection: "row-reverse"});
+    const list = document.querySelector(selector);
+    let list_length = list.childNodes.length;
+    while(list_length--) list.appendChild(list.childNodes[list_length]);
+    return list;
 }
 
 function mover(element, selector) {
@@ -67,26 +69,28 @@ function mover(element, selector) {
 }
 
 function filler(list, array) {
-    return array.forEach(function(value) { list.appendChild([li] = [document.createElement("li")].map(index => { index.textContent = value; return index; })); });
+    for(const value of array) {
+        const [li] = [document.createElement("li")].map(index => { index.textContent = value; return index; });
+        list.appendChild(li);
+    }
+    return list;
 }
 
 function dupe(selector) {
-    const element = document.querySelector(selector);
-    const new_element = document.createElement("p");
-    new_element.textContent = element.textContent;
-    element.parentNode.appendChild(new_element);
+    document.querySelector(selector).cloneNode(true).removeAttribute("id");
+    document.querySelector(selector).parentNode.appendChild(document.querySelector(selector).cloneNode(true));
 }
 
 function removeAll(selector) {
-    for(const element of document.querySelectorAll(selector)){
+    for(const element of document.querySelectorAll(selector)) {
         element.parentElement.removeChild(element);
     }
 }
 
 function getUserData() {
     return {
-        username: document.querySelector("#username").valueOf(),
-        speed: document.querySelector("#speed").valueOf(),
-        student: document.querySelector("#student").valueOf()
+        name: document.getElementById("username").value,
+        speed: parseInt(document.getElementById("speed").value),
+        student: document.querySelector("#student").checked
     }
 }
