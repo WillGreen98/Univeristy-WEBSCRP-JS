@@ -45,16 +45,16 @@ function lovelyParaAttacher() {
 }
 
 function lovelyButtonAttacher() {
-    window.button.addEventListener("click", lovelyToggle);
+    window.button1.addEventListener("click", lovelyToggle);
 }
 
 function concatWorker(event) {
-    window.out.textContent = window.value_in.value + window.value_in.value
+    window.out1.textContent = window.in1.value + window.in2.value;
 }
 
 function concatAttacher() {
-    window.value_in.addEventListener("change", concatWorker);
-    window.value_in.addEventListener("change", concatWorker);
+    window.in1.addEventListener("change", concatWorker);
+    window.in2.addEventListener("change", concatWorker);
 }
 
 function snitchAttacher() {
@@ -71,11 +71,7 @@ function reportAttacher() {
 }
 
 function idValidationWatcher(event) {
-    if(event.target.value.includes(" ")) {
-        event.target.classList.add("invalid");
-    } else {
-        event.target.classList.remove("invalid");
-    }
+    event.target.value.includes(" ") ? event.target.classList.add("invalid") : event.target.classList.remove("invalid");
 }
 
 function idValidationAttacher() {
