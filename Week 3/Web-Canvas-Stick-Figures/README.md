@@ -17,6 +17,6 @@ The multiplayer game needs a server; it's a typical Node.js server, so `npm inst
   -	object model, stick figure should be an object, with behavior
     - figure.walkTo(x,y)
     - figure.walkTo(x,y,cb) -- callback when we're there
-    - figure.draw(c,time)
+    - figure.draw(canvas_context,time)
   - stick figures dancing harlem shake?
   - admin security should be done with username/password, not with referer

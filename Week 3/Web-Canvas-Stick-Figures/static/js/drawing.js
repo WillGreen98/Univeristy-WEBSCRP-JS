@@ -2,7 +2,7 @@
 // these are helpful drawing functions for the stick figures
 //
 
-// draw a line on canvas context `c`, from point x1,y1 to point x2,y2
+// draw a line on canvas context `canvas_context`, from point x1,y1 to point x2,y2
 function line(c, x1, y1, x2, y2) {
   c.beginPath();
   c.moveTo(x1, y1);
@@ -10,7 +10,7 @@ function line(c, x1, y1, x2, y2) {
   c.stroke();
 }
 
-// draw a circle on canvas context `c`, centered on x,y, with radius r
+// draw a circle on canvas context `canvas_context`, centered on x,y, with radius r
 // also fill the circle with white (so it's not transparent)
 function circle(c, x, y, r) {
   c.save(); // we're changing fillStyle so we need to be able to restore it
@@ -23,14 +23,14 @@ function circle(c, x, y, r) {
 }
 
 
-// draw an arc on canvas context `c`, centered on x,y, with radius r, from angleStart to angleEnd
+// draw an arc on canvas context `canvas_context`, centered on x,y, with radius r, from angleStart to angleEnd
 function arc(c, x, y, r, angleStart, angleEnd) {
   c.beginPath();
   c.arc(x, y, r, angleStart, angleEnd, false);
   c.stroke();
 }
 
-// fill an ellipse on canvas context `c`, centered on x,y, with horizontal radius rx, vertical radius ry
+// fill an ellipse on canvas context `canvas_context`, centered on x,y, with horizontal radius rx, vertical radius ry
 function fillEll(c, x, y, rx, ry) {
   c.beginPath();
   c.ellipse(x, y, rx, ry, 0, 0, 2 * Math.PI, false);

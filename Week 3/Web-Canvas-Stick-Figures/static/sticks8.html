@@ -45,7 +45,7 @@
   canvas.addEventListener('click', addTarget);
 
   // get the "drawing context" - the object that can actually draw on the canvas
-  const c = canvas.getContext("2d");
+  const canvas_context = canvas.getContext("2d");
 
   // set our drawing style
   c.lineWidth = 3;
@@ -224,13 +224,13 @@
 
 
   // draw a target at x,y
-  function drawTarget(c, x, y) {
+  function drawTarget(canvas_context, x, y) {
     line(c, x-10, y, x+10, y);
     line(c, x, y-10, x, y+10);
   }
 
   // draw a diamond of a given color (as a CSS color string) at x,y
-  function drawDiamond(c, x, y, color) {
+  function drawDiamond(canvas_context, x, y, color) {
     c.save();
     c.beginPath();
     c.moveTo(x-20, y);

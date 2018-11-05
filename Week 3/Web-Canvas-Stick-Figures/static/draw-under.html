@@ -18,7 +18,7 @@
 
 <canvas id="hili" width="400" height="400"></canvas>
 
-<p>This example uses a canvas under the page on which we can draw word highlights. Every <span class=c>&lt;span class=c&gt;</span> element, forced not to wrap to a next line, is highlighted, and connected by a line to the next one.</p>
+<p>This example uses a canvas under the page on which we can draw word highlights. Every <span class=c>&lt;span class=canvas_context&gt;</span> element, forced not to wrap to a next line, is highlighted, and connected by a line to the next one.</p>
 
 <p>The rest is lorem ipsum.</p>
 
@@ -43,7 +43,7 @@
     window.hili.height = window.innerHeight;
 
     // get the context
-    const c = window.hili.getContext("2d");
+    const canvas_context = window.hili.getContext("2d");
 
     // set the drawing style
     c.lineWidth = 4;
@@ -51,7 +51,7 @@
     c.fillStyle = "#ff0";
     c.lineCap = "round";
 
-    // drawStickFigure(c, 100, 200, 45);
+    // drawStickFigure(canvas_context, 100, 200, 45);
 
     let lastCX, lastCY;
 
@@ -71,7 +71,7 @@
 
       // if (lastCX != null) {
       //   // draw a line from the previous word to the current one
-      //   line(c, lastCX, lastCY, elCX, elCY);
+      //   line(canvas_context, lastCX, lastCY, elCX, elCY);
       // }
 
       lastCX = elCX;

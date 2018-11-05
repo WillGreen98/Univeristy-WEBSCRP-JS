@@ -24,7 +24,7 @@
   'use strict';
 
   // get the "drawing context" - the object that can actually draw on the canvas
-  const c = document.getElementById("canvas").getContext("2d");
+  const canvas_context = document.getElementById("canvas").getContext("2d");
 
   // set our drawing style
   c.lineWidth = 3;
@@ -41,7 +41,7 @@
 
   // draws a stick figure on the canvas
   // the stick figure will stand over the point X,Y
-  function drawStickFigure(c, x, y) {
+  function drawStickFigure(canvas_context, x, y) {
     // because of the way the canvas works, it's best to draw lines at half-pixels
     x+=.5;
     y+=.5;
@@ -58,12 +58,12 @@
     drawFace(c, x, y-100);     // face
   }
 
-  function drawLimbs(c, x, y) {
+  function drawLimbs(canvas_context, x, y) {
     line(c, x-20, y, x, y-40);
     line(c, x+20, y, x, y-40);
   }
 
-  function drawFace(c, x, y) {
+  function drawFace(canvas_context, x, y) {
     // eyes
     circle(c, x-7, y-5, 1);  // 7 is distance from center, 5 is how high the eyes are from the head's center, 1 is eye size
     circle(c, x+7, y-5, 1);
@@ -76,16 +76,16 @@
     // const moSize = 70; // size of smile in degrees of angle; 360 would be a full circle
     // const startAngle = rad(90-moSize/2);
     // const endAngle   = rad(90+moSize/2);
-    // arc(c, x-7, y-2, 8, startAngle-.17, endAngle-.17);
-    // arc(c, x+7, y-2, 8, startAngle+.17, endAngle+.17);
+    // arc(canvas_context, x-7, y-2, 8, startAngle-.17, endAngle-.17);
+    // arc(canvas_context, x+7, y-2, 8, startAngle+.17, endAngle+.17);
     //
     // // and a pointy beard
-    // c.beginPath();
-    // c.moveTo(x-6, y+15);
-    // c.lineTo(x, y+30);
-    // c.lineTo(x+6, y+15);
-    // c.fillStyle="#fff";
-    // c.fill();
-    // c.stroke();
+    // canvas_context.beginPath();
+    // canvas_context.moveTo(x-6, y+15);
+    // canvas_context.lineTo(x, y+30);
+    // canvas_context.lineTo(x+6, y+15);
+    // canvas_context.fillStyle="#fff";
+    // canvas_context.fill();
+    // canvas_context.stroke();
   }
 </script>

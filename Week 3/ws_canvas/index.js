@@ -54,7 +54,7 @@ function drawStickFigure(el, x, y, facing) {
         arc(c, x - faceOffset, y, 12, startAngle, endAngle); // 12 is the radius of the smile circle
     }
 
-    // draw a line on canvas context `c`, from point x1,y1 to point x2,y2
+    // draw a line on canvas context `canvas_context`, from point x1,y1 to point x2,y2
     function line(c, x1, y1, x2, y2) {
         c.beginPath();
         c.moveTo(x1, y1);
@@ -62,7 +62,7 @@ function drawStickFigure(el, x, y, facing) {
         c.stroke();
     }
 
-    // draw a circle on canvas context `c`, centered on x,y, with radius r
+    // draw a circle on canvas context `canvas_context`, centered on x,y, with radius r
     // also fill the circle with white (so it's not transparent)
     function circle(c, x, y, r) {
         c.beginPath();
@@ -73,7 +73,7 @@ function drawStickFigure(el, x, y, facing) {
     }
 
 
-    // draw an arc on canvas context `c`, cenetered on x,y, with radius r, from angleStart to angleEnd
+    // draw an arc on canvas context `canvas_context`, cenetered on x,y, with radius r, from angleStart to angleEnd
     function arc(c, x, y, r, angleStart, angleEnd) {
         c.beginPath();
         c.arc(x, y, r, angleStart, angleEnd, false);

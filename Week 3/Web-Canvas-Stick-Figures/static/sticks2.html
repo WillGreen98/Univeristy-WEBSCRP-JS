@@ -23,7 +23,7 @@
   'use strict';
 
   // get the "drawing context" - the object that can actually draw on the canvas
-  const c = document.getElementById("canvas").getContext("2d");
+  const canvas_context = document.getElementById("canvas").getContext("2d");
 
   // set our drawing style
   c.lineWidth = 3;
@@ -49,7 +49,7 @@
   // draws a stick figure on the canvas
   // the stick figure will stand over the point X,Y
   // facing is a degree in which the stick figure is facing: 0 is to the right, 90 is towards us
-  function drawStickFigure(c, x, y, facing) {
+  function drawStickFigure(canvas_context, x, y, facing) {
     // because of the way the canvas works, it's best to draw lines at half-pixels
     x+=.5;
     y+=.5;
@@ -66,12 +66,12 @@
     drawFace(c, x, y-100, facing); // face
   }
 
-  function drawLimbs(c, x, y) {
+  function drawLimbs(canvas_context, x, y) {
     line(c, x-20, y, x, y-40);
     line(c, x+20, y, x, y-40);
   }
 
-  function drawFace(c, x, y, facing) {
+  function drawFace(canvas_context, x, y, facing) {
     // if the `facing` parameter is not given, the stick figure will face towards us
     if (facing === undefined) facing = 90;
 

@@ -31,7 +31,7 @@
   'use strict';
 
   // get the "drawing context" - the object that can actually draw on the canvas
-  const c = document.getElementById("canvas").getContext("2d");
+  const canvas_context = document.getElementById("canvas").getContext("2d");
 
   // set our drawing style
   c.lineWidth = 3;
@@ -68,7 +68,7 @@
   // setInterval(updateCurrentState, 1000/framesPerSecond)
 
 
-  function drawEverything(c) {
+  function drawEverything(canvas_context) {
     // clear the canvas - we'll redraw everything
     c.clearRect(0,0,800,600);
 
