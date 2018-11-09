@@ -1,0 +1,6 @@
+CSS3: Grid Layout and Custom Properties - Worksheet
+
+Your task this week is to perform your own research into how recent advances in CSS can help you write better,
+cleaner, faster, and more maintainable code.  Anything that's been published since CSS2.1 (June 2011) is fair game.
+Go and find something you've not seen before, or want to understand in more detail, and add a subfolder similar to ours,
+with examples of what you've discovered.
