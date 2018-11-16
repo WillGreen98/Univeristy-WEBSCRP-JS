@@ -1,7 +1,0 @@
-Node: Installing Node + Git
-
-This week's practical will not run in the standard Windows Shell (cmd or Powershell). You need to use Git Bash.
-
-If you are using your own machine - if you don't have Git installed already, install it and run Git Bash (you will also need to install node).
-If you would like to run node locally on a campus machine - follow this guide
-Or use your VM. WinSCP can automatically sync for editing locally, see this guide.
