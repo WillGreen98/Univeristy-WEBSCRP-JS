@@ -21,9 +21,6 @@ test(
     }
 });
 
-
-
-
 /**
  * Reuse the code from the module example (i.e. func.js in
  * the examples folder) and paste it into `utility.js` so that

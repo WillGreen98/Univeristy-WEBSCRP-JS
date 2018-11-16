@@ -1,4 +1,4 @@
-const choir = require("./choir");
+const choir = require("./choir/index");
 
 setInterval(choir.doh, 1000);
 setInterval(choir.mi, 1350);

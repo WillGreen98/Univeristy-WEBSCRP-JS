@@ -1,4 +1,4 @@
-const http = require('http');
+const http = require('Week 7/ws_node/examples/http');
 const url = require('url');
 const server = http.createServer(
   (request, response) => {
