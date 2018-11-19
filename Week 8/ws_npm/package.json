@@ -1,0 +1,34 @@
+{
+  "name": "ws_npm",
+  "version": "1.0.0",
+  "description": "introduction to node package management",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/qunit/bin/cli.js -c index.js -t test.js | cat",
+    "start": "node examples/http-express"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Jacek Kopecky <jacek@jacek.cz> (http://jacek.cz/)",
+  "contributors": [
+    "Rich Boakes <rich@boakes.org> (http://boakes.org)"
+  ],
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/portsoc/ws_npm.git"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "qunit": "^0.9.1"
+  },
+  "bugs": {
+    "url": "https://github.com/portsoc/ws_npm/issues"
+  },
+  "homepage": "https://github.com/portsoc/ws_npm#readme",
+  "directories": {
+    "example": "examples"
+  }
+}

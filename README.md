@@ -28,3 +28,6 @@ Each `Week Folder` will contain the challenge file(s)
 ## Week 6
    - CSS3 continuation
    - Circle Without Arc
+   
+## Week 7
+   - ws_node
