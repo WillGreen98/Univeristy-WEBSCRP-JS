@@ -31,3 +31,8 @@ Each `Week Folder` will contain the challenge file(s)
    
 ## Week 7
    - ws_node
+   
+## Week 8
+   - ws_npm
+   - Packages
+   - Package-lock etc
