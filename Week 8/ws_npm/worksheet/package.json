@@ -1,0 +1,14 @@
+{
+  "name": "worksheet",
+  "version": "1.0.0",
+  "description": "Week 8 NPM Tasks",
+  "main": "utility.js",
+  "scripts": {
+    "test": "node webserver.js"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.9.1"
+  }
+}

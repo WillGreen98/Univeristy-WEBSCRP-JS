@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "express": "^4.16.2",
-    "qunit": "^0.9.1"
+    "qunit": "^2.8.0",
+    "underscore": "^1.9.1"
   },
   "bugs": {
     "url": "https://github.com/portsoc/ws_npm/issues"
