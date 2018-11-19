@@ -1,6 +1,6 @@
 'use strict';
 
-let _ = require('underscore')._;
+import * as _ from 'underscore';
 
 function range(array) {
     return _.max(array) - _.min(array);
