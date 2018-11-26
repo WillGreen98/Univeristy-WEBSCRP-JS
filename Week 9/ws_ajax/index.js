@@ -33,14 +33,14 @@ async function handleError(element ,string_url) {
     element.textContent = (response.ok) ? await response.text() : "OH DEAR";
 }
 
-function drawBox(canvas, url) {
+function drawBox(canvas, string_url) {
     let ctx = canvas.getContext("2d");
 
     setInterval(function() {
-        fetch(url)
+        fetch(string_url)
             .then((response) => {return response.json()})
-            .then((json) => {
-                ctx.rect(json.x, json.y, 5, 5);
+            .then((coords) => {
+                ctx.rect(coords.x, coords.y, 5, 5);
                 ctx.stroke();
 
             })
