@@ -1,25 +1,48 @@
-/*
- * This is index.js
- * Start by modifying the id, fn and sn functions to return
- * information about you, then open index.html to check what
- * else you have to do, adding functions to the end of this
- * file as necessary.
- *
- * NB: all code you write this year should use strict mode, so
- * we've enabled that by default with the first line of code.
- */
-
 'use strict';
 
 function id() {
-    return "Replace This With Your Student ID";
-    // e.g. return "UP654321";
+    return "UP853829";
 }
 
 function fn() {
-    return "Replace This With Your First Name";
+    return "Will";
 }
 
 function sn() {
-    return "Replace This With Your Surname";
+    return "Green";
+}
+
+async function showMessage(element, string_url) {
+    element.textContent = await fetch(string_url).text();
+}
+
+async function showList(element, string_url) {
+    for(const data of await fetch(string_url).json()) {
+        let li = document.createElement("li");
+        li.textContent = i;
+        element.appendChild(li);
+    }
+}
+
+async function startShowingMessages(element, string_rul) {
+    setInterval(showMessage, 1000, element, string_rul);
+}
+
+async function handleError(element ,string_url) {
+    const response = await fetch(url);
+    element.textContent = (response.ok) ? await response.text() : "OH DEAR";
+}
+
+function drawBox(canvas, url) {
+    let ctx = canvas.getContext("2d");
+
+    setInterval(function() {
+        fetch(url)
+            .then((response) => {return response.json()})
+            .then((json) => {
+                ctx.rect(json.x, json.y, 5, 5);
+                ctx.stroke();
+
+            })
+    },1000);
 }
