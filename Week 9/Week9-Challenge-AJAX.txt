@@ -1,0 +1,18 @@
+Worksheet: AJAX
+
+AJAX — Worksheet
+This week's unit tests test your abilities to discover how to dynamically load page content.
+
+Challenges
+1. If you have questions from previous worksheet – ask us early – we may want to discuss any problems you raise with the whole group.
+2. Get a copy of the code at https://github.com/portsoc/ws_ajax onto your machine.
+    This one works best on your VM or on your own computer with Node.js and NPM set up.
+3. Open index.js and modify the id, fn and sn functions:
+    The id function should return your student ID.
+    The fn function should return your first name.
+    The sn function should return your surname.
+4. Open index.html in a browser and observe that:
+    1. not all the tests pass, but...
+    2. there are three tests concerning the id, fn and sn functions that should pass because you changed the functions above; right?
+5. The tests are all in assess.ajax.js – attempt to make them pass by implementing code in the index.js file.
+6. If you get stuck, ask each other, and ask us.
