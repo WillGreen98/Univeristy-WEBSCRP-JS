@@ -36,3 +36,10 @@ Each `Week Folder` will contain the challenge file(s)
    - ws_npm
    - Packages
    - Package-lock etc
+   
+## Week 9
+   - ws_ajax
+   
+## Week 10
+   - ws_api
+   - ws_sql
