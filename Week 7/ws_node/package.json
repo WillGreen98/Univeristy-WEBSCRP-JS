@@ -13,12 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "qnit": "^0.13.0",
-    "qunit": "^2.8.0"
+    "qunit": "^0.9.1"
   },
   "repository": "https://github.com/portsoc/ws_node.git",
   "dependencies": {
-    "cli.js": "^1.0.2",
-    "loader.js": "^4.7.0",
     "node-fetch": "^1.7.3"
   }
 }
