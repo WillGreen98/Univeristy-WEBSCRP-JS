@@ -34,15 +34,13 @@ async function handleError(element ,string_url) {
 }
 
 function drawBox(canvas, string_url) {
-    let ctx = canvas.getContext("2d");
+    let canvas_context = canvas.getContext("2d");
 
     setInterval(function() {
-        fetch(string_url)
-            .then((response) => {return response.json()})
+        fetch(string_url).then((response) => { return response.json()})
             .then((coords) => {
-                ctx.rect(coords.x, coords.y, 5, 5);
-                ctx.stroke();
-
+                canvas_context.rect(coords.x, coords.y, 5, 5);
+                canvas_context.stroke();
             })
     },1000);
 }

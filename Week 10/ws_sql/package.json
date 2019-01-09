@@ -23,6 +23,6 @@
   },
   "repository": "https://github.com/portsoc/ws_sql.git",
   "dependencies": {
-    "mysql2": "^1.5.1"
+    "mysql2": "^1.6.4"
   }
 }

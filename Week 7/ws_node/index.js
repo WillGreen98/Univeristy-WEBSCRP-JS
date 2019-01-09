@@ -1,3 +1,3 @@
 function blah() {
- return true;
+	return true;
 }
