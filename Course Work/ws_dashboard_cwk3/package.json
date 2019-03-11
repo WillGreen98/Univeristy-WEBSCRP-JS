@@ -1,0 +1,43 @@
+{
+    "name": "ws_dashboard_cwk3",
+    "version": "0.0.1",
+    "description": "My WEBSCRP DashBoard CW",
+    "main": "node server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "xo"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WillGreen98/Univeristy-WEBSCRP-JS"
+    },
+    "engines": {
+        "node": ">=6"
+    },
+    "bin": {
+        "pack-gen": "./bin/cli.js"
+    },
+    "keywords": [
+        "package",
+        "package-json"
+    ],
+    "author": {
+        "name": "Will Green",
+        "email": "up853829@myport.ac.uk",
+        "url": "https://github.com/WillGreen98.io"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/WillGreen98/Univeristy-WEBSCRP-JS/tree/master/Course%20Work/ws_game_cwk1/issues"
+    },
+    "homepage": "https://github.com/WillGreen98/Univeristy-WEBSCRP-JS/tree/master/Course%20Work/ws_game_cwk1/README.md",
+    "dependencies": {
+        "express": "^4.16.4",
+        "serve-favicon": "^2.5.0",
+        "underscore": "^1.9.1"
+    },
+    "devDependencies": {},
+    "eslintConfig": {
+        "extends": "eslint-config-xo"
+    }
+}
