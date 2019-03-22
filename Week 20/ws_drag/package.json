@@ -1,0 +1,8 @@
+{
+  "name": "ws_drag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "docs/index.js",
+  "author": "Rich Boakes <rjb@boakes.org> (http://boakes.org/)",
+  "license": "ISC"
+}

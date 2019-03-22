@@ -1,0 +1,42 @@
+{
+  "name": "dragacat",
+  "version": "0.0.1",
+  "description": "DragACat: And HTML5 Drag and Drop demonstrator",
+  "author": "rjb@port.ac.uk",
+  "contributors": [
+    "Rich Boakes <rich@boakes.org>",
+    "Jacek Kopecký <jacek@jacek.cz>"
+  ],
+  "license": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "folders": {
+    "src": "src"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "google"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "rules": {
+      "object-curly-spacing": 0,
+      "max-len": 0,
+      "indent": [
+        "error",
+        2
+      ],
+      "prefer-const": 2
+    }
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-google": "^0.12.0"
+  },
+  "scripts": {
+    "start": "open index.html; open playground.html",
+    "test": "npm run lint",
+    "lint": "eslint *.js"
+  }
+}
