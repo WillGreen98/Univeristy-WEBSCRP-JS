@@ -1,5 +1,7 @@
 # Univeristy-WEBSCRP-Challenges
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4ef8159966c4062b95fc24c8824aa7f)](https://app.codacy.com/app/will.green98/Univeristy-WEBSCRP-JS?utm_source=github.com&utm_medium=referral&utm_content=WillGreen98/Univeristy-WEBSCRP-JS&utm_campaign=Badge_Grade_Dashboard)
+
 `Work is provided by the University Module - WEBSCRP:`
 https://github.com/portsoc
 
