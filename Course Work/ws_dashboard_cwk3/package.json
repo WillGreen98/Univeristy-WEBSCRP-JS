@@ -34,7 +34,7 @@
     "dependencies": {
         "express": "^4.16.4",
         "serve-favicon": "^2.5.0",
-        "underscore": "^1.9.1"
+        "underscore": "^1.12.1"
     },
     "devDependencies": {},
     "eslintConfig": {
