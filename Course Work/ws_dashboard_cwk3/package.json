@@ -32,7 +32,7 @@
     },
     "homepage": "https://github.com/WillGreen98/Univeristy-WEBSCRP-JS/tree/master/Course%20Work/ws_game_cwk1/README.md",
     "dependencies": {
-        "express": "^4.16.4",
+        "express": "^4.18.2",
         "serve-favicon": "^2.5.0",
         "underscore": "^1.9.1"
     },
